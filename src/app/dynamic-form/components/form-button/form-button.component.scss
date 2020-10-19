@@ -6,10 +6,12 @@ button {
   line-height: 1;
   text-align: center;
   padding: 12px 30px;
+
   font-size: 15px;
   font-weight: 600;
+
   border-radius: 2px;
-  //display: inline-block;
+  display: block;
   border: none;
   color: #fff;
   transition: background-color .3s, box-shadow .3s;
