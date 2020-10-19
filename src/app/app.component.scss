@@ -5,7 +5,7 @@
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-:host ::ng-deep dynamic-form .my-dynamic-form {
+:host ::ng-deep dynamic-form .form-fields {
   display: flex;
 
   form-input{
@@ -20,7 +20,7 @@
   }
 
   form-button{
-    margin-top: 25px;
+    margin-top: 1.5em;
     flex-basis: 25%;
   }
 }

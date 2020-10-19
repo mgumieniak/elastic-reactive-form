@@ -9,7 +9,7 @@ import { FieldConfig } from '../../models/field-config.interface';
   styleUrls: ['dynamic-form.component.scss'],
   template: `
     <form
-      class="my-dynamic-form"
+      class="form-fields"
       [formGroup]="form"
       (submit)="handleSubmit($event)">
       <ng-container
