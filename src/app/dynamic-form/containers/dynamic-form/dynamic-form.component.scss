@@ -9,16 +9,31 @@
     color: rgba(0, 0, 0, 0.9);
   }
 }
-
-
-:host ::ng-deep .form-input{
-  margin-bottom: 15px;
-  label {
-    display: block;
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 0px;
-    margin-bottom: 10px;
-    color: rgba(229, 8, 8, 0.9);
-  }
+.my-dynamic-form{
+  display: flex;
+  //flex-direction: row;
 }
+
+:host ::ng-deep form-input{
+  flex-basis: 60%
+  //label {
+  //  color: rgba(229, 8, 8, 0.9);
+  //}
+}
+
+:host ::ng-deep form-select{
+  flex-basis: 20%;
+  //label {
+  //  color: rgba(229, 8, 8, 0.9);
+  //}
+}
+
+:host ::ng-deep form-button{
+  margin-top: 25px;
+  flex-basis: 20%;
+  //label {
+  //  color: rgba(229, 8, 8, 0.9);
+  //}
+}
+
+
