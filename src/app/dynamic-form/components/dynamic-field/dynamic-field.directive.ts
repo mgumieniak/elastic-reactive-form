@@ -1,24 +1,14 @@
-import {
-  ChangeDetectorRef,
-  ComponentFactoryResolver,
-  ComponentRef,
-  Directive,
-  Input,
-  OnChanges,
-  OnInit,
-  Type,
-  ViewContainerRef
-} from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import {ComponentFactoryResolver, ComponentRef, Directive, Input, OnInit, Type, ViewContainerRef} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 
-import { FormButtonComponent } from '../form-button/form-button.component';
-import { FormInputComponent } from '../form-input/form-input.component';
-import { FormSelectComponent } from '../form-select/form-select.component';
+import {FormButtonComponent} from '../form-button/form-button.component';
+import {FormInputComponent} from '../form-input/form-input.component';
+import {FormSelectComponent} from '../form-select/form-select.component';
 
-import { Field } from '../../models/field.interface';
-import { FieldConfig } from '../../models/field-config.interface';
+import {Field} from '../../models/field.interface';
+import {FieldConfig} from '../../models/field-config.interface';
 
-const components: {[type: string]: Type<Field>} = {
+const components: { [type: string]: Type<Field> } = {
   button: FormButtonComponent,
   input: FormInputComponent,
   select: FormSelectComponent
@@ -27,7 +17,7 @@ const components: {[type: string]: Type<Field>} = {
 @Directive({
   selector: '[dynamicField]'
 })
-export class DynamicFieldDirective implements Field,  OnInit {
+export class DynamicFieldDirective implements Field, OnInit {
   @Input()
   config: FieldConfig;
 
@@ -39,7 +29,8 @@ export class DynamicFieldDirective implements Field,  OnInit {
   constructor(
     private resolver: ComponentFactoryResolver,
     private container: ViewContainerRef,
-  ) {}
+  ) {
+  }
 
 
   ngOnInit() {
@@ -54,5 +45,12 @@ export class DynamicFieldDirective implements Field,  OnInit {
     this.component = this.container.createComponent(componentFactory);
     this.component.instance.config = this.config;
     this.component.instance.group = this.group;
+    this.assignCSSClass();
+  }
+
+  private assignCSSClass(): void {
+    if (this.config.className !== undefined) {
+      this.component.location.nativeElement.classList.add(this.config.className);
+    }
   }
 }

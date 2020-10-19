@@ -8,14 +8,11 @@
 :host ::ng-deep dynamic-form .form-fields {
   display: flex;
 
-  form-input .full-name-input{
-    flex-basis: 50%;
-
-    .full-name-input {
+  .full-name-input {
+      flex-basis: 50%;
       color: rgb(8, 229, 19);
     }
 
-  }
 
   form-select {
     flex-basis: 25%;

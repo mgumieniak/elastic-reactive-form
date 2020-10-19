@@ -8,7 +8,7 @@ import {FieldConfig} from '../../models/field-config.interface';
   selector: 'form-input',
   styleUrls: ['form-input.component.scss'],
   template: `
-    <div class="dynamic-field" [ngClass]="config.className"
+    <div class="dynamic-field"
          [formGroup]="group">
       <label>{{ config.label }}</label>
       <input
