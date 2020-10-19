@@ -9,31 +9,3 @@
     color: rgba(0, 0, 0, 0.9);
   }
 }
-.my-dynamic-form{
-  display: flex;
-  //flex-direction: row;
-}
-
-:host ::ng-deep form-input{
-  flex-basis: 60%
-  //label {
-  //  color: rgba(229, 8, 8, 0.9);
-  //}
-}
-
-:host ::ng-deep form-select{
-  flex-basis: 20%;
-  //label {
-  //  color: rgba(229, 8, 8, 0.9);
-  //}
-}
-
-:host ::ng-deep form-button{
-  margin-top: 25px;
-  flex-basis: 20%;
-  //label {
-  //  color: rgba(229, 8, 8, 0.9);
-  //}
-}
-
-
