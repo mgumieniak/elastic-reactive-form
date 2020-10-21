@@ -9,17 +9,22 @@
   display: flex;
 
   .full-name-input {
-      flex-basis: 50%;
+    margin: 1.5em 1.5em;
+    flex-basis: 50%;
       color: rgb(8, 229, 19);
     }
 
 
   form-select {
+    margin: 1.5em 1.5em;
+
     flex-basis: 25%;
   }
 
   form-button {
-    margin-top: 1.5em;
+    margin: 1.5em 1.5em;
+
+    margin-top: 3em;
     flex-basis: 25%;
   }
 }
